@@ -3,79 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JDC Capital — Global Financial Solutions</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="main.js"></script>
+  <title>ESG Projects — JDC Capital</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="index.html" class="brand"><img src="JDC CAPITAL.png" alt=""><span class="brand-name">JDC Capital</span></a>
-      <button id="burger" class="hamburger" aria-label="Menu">☰</button>
-      <div id="nav-links" class="nav-links">
-        <a class="btn btn-ghost" href="index.html">Home</a>
-        <a class="btn btn-ghost" href="private-credit.html">Private Credit</a>
-        <a class="btn btn-ghost" href="trade-finance.html">Commodity Trade Finance</a>
-        <a class="btn btn-ghost" href="esg-projects.html">ESG Projects</a>
-        <a class="btn btn-primary" href="#" data-contact>Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <header class="hero">
-    <div class="container">
-      <h1 class="headline">ESG Projects</h1>
-      <p class="subline">Energy Transition · Sustainability · Infrastructure · Health & Education · Agribusiness · Equity</p>
-    </div>
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="index.html"><img src="JDC CAPITAL.png" alt="JDC Capital"></a></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="private-credit.html">Private Credit</a></li>
+        <li><a href="trade-finance.html">Commodity Trade Finance</a></li>
+        <li><a class="active" href="esg-projects.html">ESG Projects</a></li>
+        <li><a href="#" id="contactBtn">Contact</a></li>
+      </ul>
+      <div class="hamburger">&#9776;</div>
+    </nav>
   </header>
 
-  <main>
-    <section class="container">
-      <div class="grid" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:18px">
-        <div class="card reveal"><h3>Energy Transition</h3><p>Renewable energy projects powered by new technologies (Solar, Wind, Hydro, Biogas & Biomass, Minerals & Metals for the transition, among others).</p></div>
-        <div class="card reveal"><h3>Sustainability</h3><p>Efficiency upgrades in plants/equipment and processes to reduce ecological footprint: energy consumption, waste minimization, biodiversity protection, carbon footprint reduction, and resource optimization.</p></div>
-        <div class="card reveal"><h3>Infrastructure</h3><p>Projects with positive social & ecological impact enabling access to efficient/sustainable services: Energy (incl. rural/off‑grid), Water & Sanitation, Transport (air/sea/land), Telecom & Interconnectivity.</p></div>
-        <div class="card reveal"><h3>Health & Education</h3><p>Financing equipment & technology, R&D, staff training, and access to quality public‑private education.</p></div>
-        <div class="card reveal"><h3>Agribusiness</h3><p>Green/organic crop production and energy‑efficiency improvements in processing plants (soy, corn, wheat, etc.).</p></div>
-        <div class="card reveal"><h3>Equity</h3><p>Funding initiatives that provide equal access to essential services and opportunities for the whole population.</p></div>
-      </div>
-    </section>
+  <section class="page-hero">
+    <h1>ESG Projects</h1>
+    <p class="subline">Energy Transition · Sustainability · Infrastructure · Health & Education · Agribusiness · Equity</p>
+  </section>
+
+  <main class="page">
+    <div class="grid cols-3">
+      <div><h3>Energy Transition</h3><p>Renewable energy projects powered by new technologies (Solar, Wind, Hydro, Biogas & Biomass, Minerals & Metals for the transition, among others).</p></div>
+      <div><h3>Sustainability</h3><p>Efficiency upgrades in plants/equipment and processes to reduce ecological footprint: energy consumption, waste minimization, biodiversity protection, carbon footprint reduction, and resource optimization.</p></div>
+      <div><h3>Infrastructure</h3><p>Projects with positive social & ecological impact enabling access to efficient/sustainable services: Energy (incl. rural/off‑grid), Water & Sanitation, Transport (air/sea/land), Telecom & Interconnectivity.</p></div>
+      <div><h3>Health & Education</h3><p>Financing equipment & technology, R&D, staff training, and access to quality public‑private education.</p></div>
+      <div><h3>Agribusiness</h3><p>Green/organic crop production (e.g., sugarcane ethanol, sugar, citrus, fertilizers) and energy‑efficiency improvements in processing plants (soy, corn, wheat, etc.).</p></div>
+      <div><h3>Equity</h3><p>Funding initiatives that provide equal access to essential services and opportunities for the whole population.</p></div>
+    </div>
   </main>
 
-  <footer>
-    <div class="container foot">
-      <span>© 2025 JDC Capital</span>
-      <div class="social"><a href="https://www.linkedin.com/company/jdc-cap" target="_blank" rel="noopener">LinkedIn ↗</a></div>
-    </div>
-  </footer>
-
-  <!-- Contact Modal -->
-  <div id="contact-modal" class="modal" aria-hidden="true">
-    <div class="modal-card">
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;">
-        <h3>Contact JDC Capital</h3>
-        <button id="modal-close" class="btn btn-secondary">Close</button>
-      </div>
-      <form id="contact-form">
-        <input class="input" type="text" name="name" placeholder="Full name" required>
-        <input class="input" type="email" name="email" placeholder="Email" required>
-        <input class="input" type="tel" name="phone" placeholder="Phone (optional)">
-        <textarea class="input" name="message" placeholder="Your message" required></textarea>
-        <input type="hidden" name="_subject" value="Website Inquiry - ESG Projects">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <div class="modal-actions">
-          <button type="button" class="btn btn-secondary" onclick="document.getElementById('contact-modal').classList.remove('show')">Cancel</button>
-          <button type="submit" class="btn btn-primary-solid">Send</button>
-        </div>
-        <div id="success" class="success-msg">Message sent. We will contact you shortly.</div>
-        <div id="error" class="error-msg">There was an error sending your message. Please try again.</div>
+  <div id="contactModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <span class="close" aria-label="Close">&times;</span>
+      <h2>Contact Us</h2>
+      <form action="https://formsubmit.co/info@jdc-capital.com" method="POST">
+        <input type="hidden" name="_subject" value="Website Inquiry - ESG Projects" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="tel" name="phone" placeholder="Your Phone Number" />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
       </form>
     </div>
   </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
