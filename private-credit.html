@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JDC Capital — Global Financial Solutions</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand"><img src="JDC CAPITAL.png" alt=""><span class="brand-name">JDC Capital</span></a>
+      <button id="burger" class="hamburger" aria-label="Menu">☰</button>
+      <div id="nav-links" class="nav-links">
+        <a class="btn btn-ghost" href="index.html">Home</a>
+        <a class="btn btn-ghost" href="private-credit.html">Private Credit</a>
+        <a class="btn btn-ghost" href="trade-finance.html">Commodity Trade Finance</a>
+        <a class="btn btn-ghost" href="esg-projects.html">ESG Projects</a>
+        <a class="btn btn-primary" href="#" data-contact>Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <h1 class="headline">Private Credit</h1>
+      <p class="subline">Direct Lending · Asset‑Backed Lending · Real Estate Deals</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="container">
+      <div class="grid cols-3">
+        <div class="card reveal">
+          <h3>Direct Lending</h3>
+          <ul class="list">
+            <li>Acquisitions</li>
+            <li>Refinancings</li>
+            <li>Flexible terms & amortizations</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h3>Asset‑Backed Lending</h3>
+          <ul class="list">
+            <li>Receivables</li>
+            <li>Inventory</li>
+            <li>Property & Equipment</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h3>Real Estate Deals</h3>
+          <p>Retail, Commercial and Industrial Real Estate projects.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <span>© 2025 JDC Capital</span>
+      <div class="social"><a href="https://www.linkedin.com/company/jdc-cap" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+    </div>
+  </footer>
+
+  <!-- Contact Modal -->
+  <div id="contact-modal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;">
+        <h3>Contact JDC Capital</h3>
+        <button id="modal-close" class="btn btn-secondary">Close</button>
+      </div>
+      <form id="contact-form">
+        <input class="input" type="text" name="name" placeholder="Full name" required>
+        <input class="input" type="email" name="email" placeholder="Email" required>
+        <input class="input" type="tel" name="phone" placeholder="Phone (optional)">
+        <textarea class="input" name="message" placeholder="Your message" required></textarea>
+        <input type="hidden" name="_subject" value="Website Inquiry - Private Credit">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary" onclick="document.getElementById('contact-modal').classList.remove('show')">Cancel</button>
+          <button type="submit" class="btn btn-primary-solid">Send</button>
+        </div>
+        <div id="success" class="success-msg">Message sent. We will contact you shortly.</div>
+        <div id="error" class="error-msg">There was an error sending your message. Please try again.</div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
