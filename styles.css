@@ -4,26 +4,20 @@ html,body{margin:0;padding:0;scroll-behavior:smooth}
 body{font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;color:#0f172a;background:#fff}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;height:auto;display:block}
-
-/* NAVBAR */
 header{position:sticky;top:0;z-index:50;background:#fff}
 .navbar{display:flex;align-items:center;gap:12px;padding:10px 16px;border-bottom:1px solid #e5e7eb}
-.logo img{height:42px;width:auto}
+.logo img{height:46px;width:auto}
 .nav-links{margin-left:auto;display:flex;align-items:center;gap:12px;list-style:none;padding:0}
 .nav-links a{display:inline-flex;align-items:center;gap:6px;padding:10px 12px;border-radius:10px;font-weight:600;color:#0f172a}
 .nav-links a:hover{background:#f3f4f6}
 .nav-links .active{background:#eef2ff}
 .hamburger{display:none;margin-left:auto;font-size:28px;cursor:pointer}
-
-/* HERO */
 .hero{background:linear-gradient(135deg, var(--brand), #0A0F70);color:#fff;text-align:center;padding:64px 16px}
 .hero h1{margin:0 0 8px;font-size:clamp(28px,4vw,44px);letter-spacing:.04em}
 .hero p{opacity:.92;margin:0}
 .hero-cta{margin-top:14px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
 .btn{background:#ffffff;color:#0B108A;padding:10px 14px;border-radius:12px;font-weight:700;text-decoration:none}
 .btn-outline{border:1px solid rgba(255,255,255,.9);color:#ffffff;padding:10px 14px;border-radius:12px;font-weight:700;text-decoration:none}
-
-/* SECCIONES */
 section{padding:56px 16px;max-width:1120px;margin:0 auto}
 .who-we-are h2,.solutions-home h2{color:#0b0f2a;margin:0 0 12px}
 .cards{display:grid;gap:16px;grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -31,8 +25,6 @@ section{padding:56px 16px;max-width:1120px;margin:0 auto}
 .card h3{margin:0 0 6px;color:var(--ink)}
 .card p{color:#334155;margin:0 0 10px}
 .card a{font-weight:700;color:var(--ink);text-decoration:none}
-
-/* INTERNAL PAGES */
 .subline{color:#475569;margin-top:6px}
 .page-hero{background:linear-gradient(135deg, var(--brand), #0A0F70);color:#fff;padding:48px 16px;text-align:center}
 .page{max-width:1120px;margin:0 auto;padding:32px 16px}
@@ -40,8 +32,6 @@ section{padding:56px 16px;max-width:1120px;margin:0 auto}
 .cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .list{margin:8px 0 0 18px;color:#334155}
 .sep{border:0;border-top:1px solid #e5e7eb;margin:28px 0}
-
-/* MODAL CONTACTO */
 .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);align-items:flex-start;justify-content:center;padding:20px;z-index:70}
 .modal.show{display:flex}
 .modal-content{background:#fff;color:#0f172a;border-radius:16px;max-width:560px;width:100%;padding:20px;margin-top:10vh;box-shadow:0 20px 40px rgba(2,6,23,.3)}
@@ -50,13 +40,10 @@ section{padding:56px 16px;max-width:1120px;margin:0 auto}
 .modal-content form input,.modal-content form textarea{width:100%;border:1px solid #e5e7eb;border-radius:12px;padding:12px 14px;margin:6px 0 10px;font:inherit}
 .modal-content form textarea{min-height:120px;resize:vertical}
 .modal-content form button{background:#0B108A;color:#fff;border:0;border-radius:12px;padding:10px 14px;font-weight:700;cursor:pointer}
-
-/* MOBILE improvements */
 @media (max-width:900px){
   .hamburger{display:block}
   .nav-links{display:none;position:absolute;right:16px;top:60px;background:#ffffff;border:1px solid #e5e7eb;border-radius:12px;padding:8px;flex-direction:column;min-width:240px}
   .nav-links.show{display:flex}
-  /* Dos columnas en mobile para mejorar layout */
   .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
   .cols-3{grid-template-columns:1fr}
 }
