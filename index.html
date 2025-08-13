@@ -7,80 +7,28 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-    :root{ --brand:#0B108A; --ink:#0B108A; --paper:#ffffff; --muted:#6b7280; }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;scroll-behavior:smooth}
-    body{font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;color:#0f172a;background:#fff}
-    a{text-decoration:none;color:inherit}
-    /* NAV */
-    .nav{position:sticky;top:0;z-index:50;background:rgba(11,16,138,.97);backdrop-filter:saturate(150%) blur(6px);border-bottom:1px solid rgba(255,255,255,.12)}
-    .nav-inner{max-width:1120px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:10px 16px;color:#fff}
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand img{height:36px;width:auto;border-radius:6px}
-    .brand-name{font-family:Cinzel, serif;font-weight:700;letter-spacing:.04em}
-    .nav-links{margin-left:auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;font-weight:600}
-    .btn-ghost{color:#fff}
-    .btn-ghost:hover{background:rgba(255,255,255,.12)}
-    .btn-outline{border:1px solid rgba(255,255,255,.6);color:#fff}
-    .btn-primary{background:#fff;color:var(--ink)}
-    /* HERO */
-    .hero{background:linear-gradient(135deg, var(--brand), #0A0F70);color:#fff}
-    .container{max-width:1120px;margin:0 auto;padding:64px 16px}
-    .hero-grid{display:grid;grid-template-columns:1.2fr;gap:24px;align-items:center;justify-items:center;text-align:center}
-    .logo-big{width:min(380px, 70vw);height:auto;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
-    .headline{font-family:Cinzel, serif;font-size:clamp(28px,4vw,44px);letter-spacing:.04em;margin:12px 0 8px}
-    .subline{opacity:.92;margin:0 0 12px}
-    .cta-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px}
-    /* SECTION */
-    section{scroll-margin-top:80px}
-    .kicker{color:var(--brand);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:12px;margin-bottom:8px}
-    h2{font-family:Cinzel, serif;color:#0b0f2a;margin:0 0 10px;font-size:clamp(22px,3vw,30px)}
-    p{color:#334155;line-height:1.6;margin:0}
-    .grid{display:grid;gap:18px}
-    .cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-    .card{border:1px solid #e5e7eb;border-radius:16px;padding:18px;background:#fff;box-shadow:0 6px 18px rgba(2,6,23,.06)}
-    .card h3{font-weight:700;color:var(--ink);margin:0 0 6px;font-size:18px}
-    .list{margin:8px 0 0;padding-left:18px;color:#334155}
-    .list li{margin:4px 0}
-    .section-alt{background:#f8fafc}
-    /* FOOTER */
-    footer{background:#f8fafc;border-top:1px solid #e5e7eb}
-    .foot{display:flex;justify-content:space-between;align-items:center;gap:12px;color:#475569}
-    .social a{opacity:.85}
-    .social a:hover{opacity:1}
-    /* Reveal */
-    .reveal{opacity:0;transform:translateY(16px);transition:all .6s ease}
-    .reveal.show{opacity:1;transform:none}
-    /* Responsive */
-    @media (max-width:900px){
-      .cols-3{grid-template-columns:1fr}
-    }
-  </style>
-
-<script src="uniform.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="main.js"></script>
 </head>
 <body>
-  <!-- NAV -->
   <nav class="nav">
     <div class="nav-inner">
-      <a href="#top" class="brand">
+      <a href="index.html" class="brand">
         <img src="JDC CAPITAL.png" alt="JDC Capital logo">
         <span class="brand-name">JDC Capital</span>
       </a>
-      <div class="nav-links">
-        <a class="btn btn-ghost" href="#top">Home</a>
-        <a class="btn btn-ghost" href="#pc">Private Credit</a>
-        <a class="btn btn-ghost" href="#ctf">Commodity Trade Finance</a>
-        <a class="btn btn-ghost" href="#esg">ESG Projects</a>
-        <a class="btn btn-primary" href="mailto:info@jdc-capital.com">Contact</a>
+      <button id="burger" class="hamburger" aria-label="Menu">☰</button>
+      <div id="nav-links" class="nav-links">
+        <a class="btn btn-ghost" href="index.html">Home</a>
+        <a class="btn btn-ghost" href="private-credit.html">Private Credit</a>
+        <a class="btn btn-ghost" href="trade-finance.html">Commodity Trade Finance</a>
+        <a class="btn btn-ghost" href="esg-projects.html">ESG Projects</a>
+        <a class="btn btn-primary" href="#" data-contact>Contact</a>
       </div>
     </div>
   </nav>
 
-  <!-- HERO (Slide 1) -->
   <header id="top" class="hero">
     <div class="container">
       <div class="hero-grid">
@@ -89,40 +37,17 @@
           <h1 class="headline reveal" style="margin-top:6px;">GLOBAL FINANCIAL SOLUTIONS</h1>
           <p class="subline reveal">Private Credit · Commodity Trade Finance · ESG Projects</p>
           <div class="cta-row reveal">
-            <a href="#pc" class="btn btn-primary">Explore Solutions</a>
-            <a href="mailto:info@jdc-capital.com" class="btn btn-outline">Talk to Us</a>
+            <a href="private-credit.html" class="btn">Explore Solutions</a>
+            <a href="#" class="btn btn-outline" data-contact>Talk to Us</a>
           </div>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- WHO WE ARE (Slide 2) embedded in Home -->
-  <section id="who">
+  <section id="pc">
     <div class="container">
-      <p class="kicker">Who we are</p>
-      <h2 class="reveal">Expert, tailor‑made financial solutions</h2>
-      <div class="grid cols-3">
-        <div class="card reveal">
-          <h3>Our Service</h3>
-          <p>We are experts in providing tailor‑made financial solutions for each one of our Clients.</p>
-        </div>
-        <div class="card reveal">
-          <h3>Experience</h3>
-          <p>35+ years across Capital Markets, Corporate Finance, Asset Management & Advisory; leading transactions for more than USD 40 Billion in top‑tier international banks.</p>
-        </div>
-        <div class="card reveal">
-          <h3>Solutions</h3>
-          <p>We offer credit facilities specialized in Private Credit, Commodity Trade Finance and ESG Projects — maximizing financial value for all our Clients.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRIVATE CREDIT (Slide 3) -->
-  <section id="pc" class="section-alt">
-    <div class="container">
-      <p class="kicker">Our solutions</p>
+      <p class="kicker">Our Solutions</p>
       <h2 class="reveal">Private Credit</h2>
       <div class="grid cols-3">
         <div class="card reveal">
@@ -149,10 +74,8 @@
     </div>
   </section>
 
-  <!-- COMMODITY TRADE FINANCE (Slide 4) -->
-  <section id="ctf">
+  <section id="ctf" class="section-alt">
     <div class="container">
-      <p class="kicker">Our solutions</p>
       <h2 class="reveal">Commodity Trade Finance</h2>
       <div class="grid cols-3">
         <div class="card reveal">
@@ -164,30 +87,26 @@
           </ul>
         </div>
         <div class="card reveal">
-          <h3>Import Finance</h3>
-          <p>Solutions to address payments to overseas suppliers.</p>
-          <h3 style="margin-top:10px;">Investment Finance / CapEx</h3>
-          <p>Financing and debt refinancing better suited to Client conditions.</p>
+          <h3>Import & Investment Finance</h3>
+          <p>Payments to overseas suppliers. CapEx and debt refinancing tailored to Client conditions.</p>
         </div>
         <div class="card reveal">
           <h3>Trade Flow Management</h3>
-          <p>Integral analysis of all trade flows to reach the best possible financing / payment structure.</p>
+          <p>Integral analysis to reach the best financing / payment structure.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ESG PROJECTS (Slide 8) -->
-  <section id="esg" class="section-alt">
+  <section id="esg">
     <div class="container">
-      <p class="kicker">Our solutions</p>
       <h2 class="reveal">ESG Projects</h2>
       <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px">
-        <div class="card reveal"><h3>Energy Transition</h3><p>Renewable energy projects powered by new technologies.</p></div>
-        <div class="card reveal"><h3>Sustainability</h3><p>Efficiency upgrades that reduce the ecological footprint.</p></div>
-        <div class="card reveal"><h3>Infrastructure</h3><p>Projects with positive social and ecological impact.</p></div>
-        <div class="card reveal"><h3>Health & Education</h3><p>Public and private institutions — equipment, R&D, training.</p></div>
-        <div class="card reveal"><h3>Agribusiness</h3><p>Processing plants, green crop yields, distribution.</p></div>
+        <div class="card reveal"><h3>Energy Transition</h3><p>Renewables powered by new technologies.</p></div>
+        <div class="card reveal"><h3>Sustainability</h3><p>Efficiency upgrades that reduce ecological footprint.</p></div>
+        <div class="card reveal"><h3>Infrastructure</h3><p>Positive social and ecological impact.</p></div>
+        <div class="card reveal"><h3>Health & Education</h3><p>Equipment, R&D, training.</p></div>
+        <div class="card reveal"><h3>Agribusiness</h3><p>Processing plants, green crops, distribution.</p></div>
         <div class="card reveal"><h3>Equity</h3><p>Access to quality opportunities for social development.</p></div>
       </div>
     </div>
@@ -202,29 +121,29 @@
     </div>
   </footer>
 
-  <script>
-    // simple reveal on scroll
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} });
-    }, {threshold:.08});
-    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-  </script>
-
-<div id="contactModal" class="modal" aria-hidden="true">
-  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
-    <span class="close" aria-label="Close">&times;</span>
-    <h2 id="contactTitle">Contact Us</h2>
-    <form action="https://formsubmit.co/info@jdc-capital.com" method="POST">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="tel" name="phone" placeholder="Your Phone Number">
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
+  <!-- Contact Modal -->
+  <div id="contact-modal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;">
+        <h3>Contact JDC Capital</h3>
+        <button id="modal-close" class="btn btn-secondary">Close</button>
+      </div>
+      <form id="contact-form">
+        <input class="input" type="text" name="name" placeholder="Full name" required>
+        <input class="input" type="email" name="email" placeholder="Email" required>
+        <input class="input" type="tel" name="phone" placeholder="Phone (optional)">
+        <textarea class="input" name="message" placeholder="Your message" required></textarea>
+        <input type="hidden" name="_subject" value="Website Inquiry - JDC Capital">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary" onclick="document.getElementById('contact-modal').classList.remove('show')">Cancel</button>
+          <button type="submit" class="btn btn-primary-solid">Send</button>
+        </div>
+        <div id="success" class="success-msg">Message sent. We will contact you shortly.</div>
+        <div id="error" class="error-msg">There was an error sending your message. Please try again.</div>
+      </form>
+    </div>
   </div>
-</div>
-
 </body>
 </html>
