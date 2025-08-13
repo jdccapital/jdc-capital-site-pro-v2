@@ -21,7 +21,7 @@
         <a class="btn btn-ghost" href="private-credit.html">Private Credit</a>
         <a class="btn btn-ghost" href="trade-finance.html">Commodity Trade Finance</a>
         <a class="btn btn-ghost" href="esg-projects.html">ESG Projects</a>
-        <a class="btn btn-primary" href="#" data-contact>Contact</a>
+        <a id="contactBtn" class="btn btn-primary" href="#" data-contact>Contact</a>
       </div>
     </div>
   </nav>
@@ -77,5 +77,21 @@
       </form>
     </div>
   </div>
+<!-- JDC Contact Modal (hidden by default) -->
+<div id="contactModal" class="modal" aria-hidden="true">
+  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+    <span class="close" aria-label="Close">&times;</span>
+    <h2 id="contactTitle">Contact Us</h2>
+    <form action="https://formsubmit.co/info@jdc-capital.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="tel" name="phone" placeholder="Your Phone Number">
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="button">Send</button>
+    </form>
+  </div>
+</div>
 </body>
 </html>
