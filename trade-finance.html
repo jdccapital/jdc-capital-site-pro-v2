@@ -1,36 +1,170 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JDC Capital — Global Financial Solutions</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{ --brand:#0B108A; --ink:#0B108A; --paper:#ffffff; --muted:#6b7280; }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;scroll-behavior:smooth}
+    body{font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;color:#0f172a;background:#fff}
+    a{text-decoration:none;color:inherit}
+    /* NAV */
+    .nav{position:sticky;top:0;z-index:50;background:rgba(11,16,138,.97);backdrop-filter:saturate(150%) blur(6px);border-bottom:1px solid rgba(255,255,255,.12)}
+    .nav-inner{max-width:1120px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:10px 16px;color:#fff}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{height:36px;width:auto;border-radius:6px}
+    .brand-name{font-family:Cinzel, serif;font-weight:700;letter-spacing:.04em}
+    .nav-links{margin-left:auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;font-weight:600}
+    .btn-ghost{color:#fff}
+    .btn-ghost:hover{background:rgba(255,255,255,.12)}
+    .btn-outline{border:1px solid rgba(255,255,255,.6);color:#fff}
+    .btn-primary{background:#fff;color:var(--ink)}
+    /* HERO */
+    .hero{background:linear-gradient(135deg, var(--brand), #0A0F70);color:#fff}
+    .container{max-width:1120px;margin:0 auto;padding:64px 16px}
+    .hero-grid{display:grid;grid-template-columns:1.2fr;gap:24px;align-items:center;justify-items:center;text-align:center}
+    .logo-big{width:min(380px, 70vw);height:auto;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .headline{font-family:Cinzel, serif;font-size:clamp(28px,4vw,44px);letter-spacing:.04em;margin:12px 0 8px}
+    .subline{opacity:.92;margin:0 0 12px}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+    /* SECTION */
+    section{scroll-margin-top:80px}
+    .kicker{color:var(--brand);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:12px;margin-bottom:8px}
+    h2{font-family:Cinzel, serif;color:#0b0f2a;margin:0 0 10px;font-size:clamp(22px,3vw,30px)}
+    p{color:#334155;line-height:1.6;margin:0}
+    .grid{display:grid;gap:18px}
+    .cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .card{border:1px solid #e5e7eb;border-radius:16px;padding:18px;background:#fff;box-shadow:0 6px 18px rgba(2,6,23,.06)}
+    .card h3{font-weight:700;color:var(--ink);margin:0 0 6px;font-size:18px}
+    .list{margin:8px 0 0;padding-left:18px;color:#334155}
+    .list li{margin:4px 0}
+    .section-alt{background:#f8fafc}
+    /* FOOTER */
+    footer{background:#f8fafc;border-top:1px solid #e5e7eb}
+    .foot{display:flex;justify-content:space-between;align-items:center;gap:12px;color:#475569}
+    .social a{opacity:.85}
+    .social a:hover{opacity:1}
+    /* Reveal */
+    .reveal{opacity:0;transform:translateY(16px);transition:all .6s ease}
+    .reveal.show{opacity:1;transform:none}
+    /* Responsive */
+    @media (max-width:900px){
+      .cols-3{grid-template-columns:1fr}
+    }
+  </style>
+
+
+<style>
+/* Fallback only; keeps your current design */
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);align-items:flex-start;justify-content:center;padding:20px;z-index:1000}
+.modal.show{display:flex}
+.modal-content{background:#fff;color:#0f172a;border-radius:16px;max-width:560px;width:100%;padding:20px;margin-top:10vh;box-shadow:0 20px 40px rgba(2,6,23,.3)}
+.modal .close{float:right;font-size:24px;cursor:pointer}
+.modal-content form input,.modal-content form textarea{width:100%;border:1px solid #e5e7eb;border-radius:12px;padding:12px 14px;margin:6px 0 10px;font:inherit}
+.modal-content form textarea{min-height:120px;resize:vertical}
+.modal-content form button{background:#0B108A;color:#fff;border:0;border-radius:12px;padding:10px 14px;font-weight:700;cursor:pointer}
+.hamburger{display:none;font-size:28px;cursor:pointer;margin-left:12px}
+@media(max-width:900px){
+  .hamburger{display:block}
+  #site-menu{display:none;position:absolute;right:16px;top:60px;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:8px;flex-direction:column;min-width:240px;z-index:999}
+  body.nav-open #site-menu{display:flex}
+}
+</style>
+
 <title>Commodity Trade Finance — JDC Capital</title>
-<link rel="icon" href="/favicon.ico"><link rel="icon" type="image/png" href="/favicon-512.png" sizes="512x512">
-<link rel="apple-touch-icon" href="/favicon-512.png"><link rel="stylesheet" href="styles.css" />
-</head><body><header><nav class="navbar">
-<div class="logo"><a href="index.html"><img src="JDC CAPITAL.png" alt="JDC Capital"></a></div>
-<ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="private-credit.html">Private Credit</a></li>
-<li><a class="active" href="trade-finance.html">Commodity Trade Finance</a></li><li><a href="esg-projects.html">ESG Projects</a></li><li><a href="#" id="contactBtn">Contact</a></li></ul>
-<div class="hamburger">&#9776;</div></nav></header>
+<script src="uniform.js" defer></script>
+</head>
+<body>
+<nav class="nav">
+    <div class="nav-inner">
+      <a href="#top" class="brand">
+        <img src="JDC CAPITAL.png" alt="JDC Capital logo">
+        <span class="brand-name">JDC Capital</span>
+      </a>
+      <div class="nav-links">
+        <a class="btn btn-ghost" href="#top">Home</a>
+        <a class="btn btn-ghost" href="private-credit.html">Private Credit</a>
+        <a class="btn btn-ghost" href="trade-finance.html">Commodity Trade Finance</a>
+        <a class="btn btn-ghost" href="esg-projects.html">ESG Projects</a>
+        <a class="btn btn-primary" href="#">Contact</a>
+      </div>
+    </div>
+  <button class="hamburger" aria-label="Open menu">☰</button>
+</nav>
 <section class="page-hero"><h1>Commodity Trade Finance</h1><p class="subline">Pre‑Export · Import · Investment Finance · Trade Flow Management</p></section>
-<main class="page"><div class="grid cols-3">
-<div><h3>Pre‑Export Finance</h3><ul class="list"><li>Receivable Finance / COFACE</li><li>Warehouse / Warrant Finance</li><li>Voyage Finance</li></ul></div>
-<div><h3>Import Finance</h3><p>Solutions to address payments to overseas suppliers.</p><h3 style="margin-top:10px;">Investment Finance / CapEx</h3><p>Financing and debt refinancing better suited to Client conditions.</p></div>
-<div><h3>Trade Flow Management</h3><p>Integral analysis of all trade flows to reach the best possible financing / payment structure.</p></div></div>
-<hr class="sep" /><section><h3>Pre‑Export Finance — Flow</h3><ol class="list">
-<li>An export, purchase or equivalent contract is signed between the local Producer and the Offtaker and subsequently assigned to the Investors. Payment by the Offtaker is credited directly to the Investors.</li>
-<li>Investors disburse the loan in USD to the Producer. Such financing is reported to the Central Bank.</li>
-<li>Through a Local Bank, the Producer converts the USD into local currency to operate.</li>
-<li>Once the product is exported, the Offtaker pays the sale proceeds directly to the Investors’ account abroad.</li></ol></section>
-<section><h3>Import Finance — Flow</h3><ol class="list">
-<li>The Central Bank enables the Investor’s disbursement for import payments to the Supplier to be made directly abroad (cash or in advance against import documents).</li>
-<li>The Producer operates normally, complying with Import Payment Monitoring through a local Financial Institution.</li>
-<li>At the agreed maturity, the Central Bank authorizes the Producer to transfer USD abroad to the Investors’ account through a local Financial Institution.</li></ol></section>
-<section><h3>Investment Finance</h3><ul class="list">
-<li>Export‑oriented Project Finance / CapEx tailored to the project’s needs.</li>
-<li>Structures aligned with Central Bank standards, enabling efficient medium/long‑term financing with repayment abroad.</li>
-<li>Debt refinancing, applying export revenues abroad to optimize the balance sheet.</li></ul></section></main>
-<div id="contactModal" class="modal" aria-hidden="true"><div class="modal-content">
-<span class="close" aria-label="Close">&times;</span><h2>Contact Us</h2>
-<form action="https://formsubmit.co/info@jdc-capital.com" method="POST">
-<input type="hidden" name="_subject" value="Website Inquiry - Trade Finance" /><input type="hidden" name="_captcha" value="false" /><input type="hidden" name="_template" value="table" />
-<input type="text" name="name" placeholder="Your Name" required /><input type="email" name="email" placeholder="Your Email" required />
-<input type="tel" name="phone" placeholder="Your Phone Number" /><textarea name="message" placeholder="Your Message" required></textarea>
-<button type="submit">Send</button></form></div></div>
-<script src="main.js"></script></body></html>
+<main class="page">
+
+<div class="grid cols-3">
+  <div>
+    <h3>Pre‑Export Finance</h3>
+    <ul class="list">
+      <li>Receivable Finance / COFACE</li>
+      <li>Warehouse / Warrant Finance</li>
+      <li>Voyage Finance</li>
+    </ul>
+  </div>
+  <div>
+    <h3>Import Finance</h3>
+    <p>Solutions to address payments to overseas suppliers.</p>
+    <h3>Investment Finance / CapEx</h3>
+    <p>Financing and debt refinancing better suited to Client conditions.</p>
+  </div>
+  <div>
+    <h3>Trade Flow Management</h3>
+    <p>Integral analysis of all trade flows to reach the best possible financing / payment structure.</p>
+  </div>
+</div>
+<hr class="sep" />
+<section>
+  <h3>Pre‑Export Finance — Flow</h3>
+  <ol class="list">
+    <li>An export, purchase or equivalent contract is signed between the local Producer and the Offtaker and subsequently assigned to the Investors. Payment by the Offtaker is credited directly to the Investors.</li>
+    <li>Investors disburse the loan in USD to the Producer. Such financing is reported to the Central Bank.</li>
+    <li>Through a Local Bank, the Producer converts the USD into local currency to operate.</li>
+    <li>Once the product is exported, the Offtaker pays the sale proceeds directly to the Investors’ account abroad.</li>
+  </ol>
+</section>
+<section>
+  <h3>Import Finance — Flow</h3>
+  <ol class="list">
+    <li>The Central Bank enables the Investor’s disbursement for import payments to the Supplier to be made directly abroad (cash or in advance against import documents).</li>
+    <li>The Producer operates normally, complying with Import Payment Monitoring through a local Financial Institution.</li>
+    <li>At the agreed maturity, the Central Bank authorizes the Producer to transfer USD abroad to the Investors’ account through a local Financial Institution.</li>
+  </ol>
+</section>
+<section>
+  <h3>Investment Finance</h3>
+  <ul class="list">
+    <li>Export‑oriented Project Finance / CapEx tailored to the project’s needs.</li>
+    <li>Structures aligned with Central Bank standards, enabling efficient medium/long‑term financing with repayment abroad.</li>
+    <li>Debt refinancing, applying export revenues abroad to optimize the balance sheet.</li>
+  </ul>
+</section>
+
+</main>
+
+<div id="contactModal" class="modal" aria-hidden="true">
+  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+    <span class="close" aria-label="Close">&times;</span>
+    <h2 id="contactTitle">Contact Us</h2>
+    <form action="https://formsubmit.co/info@jdc-capital.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="tel" name="phone" placeholder="Your Phone Number">
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

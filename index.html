@@ -60,27 +60,7 @@
     }
   </style>
 
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" href="/favicon-512.png" sizes="512x512">
-  <link rel="apple-touch-icon" href="/favicon-512.png">
-
-<style>
-/* Modal (fallback) */
-.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);align-items:flex-start;justify-content:center;padding:20px;z-index:1000}
-.modal.show{display:flex}
-.modal-content{background:#fff;color:#0f172a;border-radius:16px;max-width:560px;width:100%;padding:20px;margin-top:10vh;box-shadow:0 20px 40px rgba(2,6,23,.3)}
-.modal .close{float:right;font-size:24px;cursor:pointer}
-.modal-content form input,.modal-content form textarea{width:100%;border:1px solid #e5e7eb;border-radius:12px;padding:12px 14px;margin:6px 0 10px;font:inherit}
-.modal-content form textarea{min-height:120px;resize:vertical}
-.modal-content form button{background:#0B108A;color:#fff;border:0;border-radius:12px;padding:10px 14px;font-weight:700;cursor:pointer}
-/* Hamburger (fallback) */
-.hamburger{display:none;font-size:28px;cursor:pointer;margin-left:12px}
-@media(max-width:900px){
-  .hamburger{display:block}
-  nav ul, .navbar ul, .nav-links{display:none;position:absolute;right:16px;top:60px;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:8px;flex-direction:column;min-width:240px;z-index:999}
-  body.nav-open nav ul, body.nav-open .navbar ul, body.nav-open .nav-links{display:flex}
-}
-</style>
+<script src="uniform.js" defer></script>
 </head>
 <body>
   <!-- NAV -->
@@ -92,10 +72,10 @@
       </a>
       <div class="nav-links">
         <a class="btn btn-ghost" href="#top">Home</a>
-        <a class="btn btn-ghost" href="private-credit.html">Private Credit</a>
-        <a class="btn btn-ghost" href="trade-finance.html">Commodity Trade Finance</a>
-        <a class="btn btn-ghost" href="esg-projects.html">ESG Projects</a>
-        <a id="contactBtn" class="btn btn-primary" href="#">Contact</a>
+        <a class="btn btn-ghost" href="#pc">Private Credit</a>
+        <a class="btn btn-ghost" href="#ctf">Commodity Trade Finance</a>
+        <a class="btn btn-ghost" href="#esg">ESG Projects</a>
+        <a class="btn btn-primary" href="mailto:info@jdc-capital.com">Contact</a>
       </div>
     </div>
   </nav>
@@ -109,8 +89,8 @@
           <h1 class="headline reveal" style="margin-top:6px;">GLOBAL FINANCIAL SOLUTIONS</h1>
           <p class="subline reveal">Private Credit · Commodity Trade Finance · ESG Projects</p>
           <div class="cta-row reveal">
-            <a id="exploreBtn" href="#solutions" class="btn btn-primary">Explore Solutions</a>
-            <a id="contactBtnHero" href="#" class="btn btn-outline">Talk to Us</a>
+            <a href="#pc" class="btn btn-primary">Explore Solutions</a>
+            <a href="mailto:info@jdc-capital.com" class="btn btn-outline">Talk to Us</a>
           </div>
         </div>
       </div>
@@ -152,7 +132,6 @@
             <li>Refinancings</li>
             <li>Flexible terms & amortizations</li>
           </ul>
-<div class="hamburger" aria-label="Open menu">&#9776;</div>
         </div>
         <div class="card reveal">
           <h3>Asset‑Backed Lending</h3>
@@ -230,6 +209,7 @@
     }, {threshold:.08});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   </script>
+
 <div id="contactModal" class="modal" aria-hidden="true">
   <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
     <span class="close" aria-label="Close">&times;</span>
@@ -245,5 +225,6 @@
     </form>
   </div>
 </div>
+
 </body>
 </html>
