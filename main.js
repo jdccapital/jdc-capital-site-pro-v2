@@ -41,15 +41,3 @@ document.addEventListener('DOMContentLoaded',()=>{
     }catch(_){ err.style.display='block'; }
   });
 });
-
-// JDC: open/close single modal & anchor bindings
-(function(){
-  function openModal(e){ const m=document.getElementById('contactModal'); if(m){ e && e.preventDefault(); m.classList.add('show'); } }
-  function closeModal(){ document.getElementById('contactModal')?.classList.remove('show'); }
-  document.addEventListener('click', function(e){
-    const a = e.target.closest('a#contactBtn, a#contactBtnHero');
-    if(a){ openModal(e); }
-    if(e.target.classList && e.target.classList.contains('close')) closeModal();
-    if(e.target.id==='contactModal') closeModal();
-  }, true);
-})();
