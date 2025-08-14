@@ -21,7 +21,7 @@
         <a class="btn btn-ghost" href="private-credit.html">Private Credit</a>
         <a class="btn btn-ghost" href="trade-finance.html">Commodity Trade Finance</a>
         <a class="btn btn-ghost" href="esg-projects.html">ESG Projects</a>
-        <a class="btn btn-primary" href="#" data-contact>Contact</a>
+        <a id="contactBtn" class="btn btn-primary" href="#" data-contact>Contact</a>
       </div>
     </div>
   </nav>
@@ -58,7 +58,7 @@
     </section>
 
     <section class="container section-alt" style="border-top:1px solid #e5e7eb">
-      <h3>Pre‑Export Finance — Flow</h3>
+      <h3>Pre‑Export Finance</h3>
       <ol class="list">
         <li>Export/purchase contract between Producer and Offtaker assigned to Investors; Offtaker payments credited to Investors.</li>
         <li>Investors disburse USD loan to Producer and report to Central Bank.</li>
@@ -68,11 +68,11 @@
     </section>
 
     <section class="container">
-      <h3>Import Finance — Flow</h3>
+      <h3>Import Finance</h3>
       <ol class="list">
-        <li>Central Bank allows Investor disbursement to Supplier abroad (cash or advance against docs).</li>
-        <li>Producer operates under Import Payment Monitoring via local FI.</li>
-        <li>At maturity, Central Bank authorizes USD transfer abroad to Investors via local FI.</li>
+        <li>Central Bank allows Investor disbursement to Supplier abroad (cash or advance against documents).</li>
+        <li>Producer operates under Import Payment Monitoring via local Financial Institution.</li>
+        <li>At maturity, Central Bank authorizes USD transfer abroad to Investors via local Financial Institution.</li>
       </ol>
     </section>
 
@@ -117,5 +117,25 @@
       </form>
     </div>
   </div>
+<!-- JDC Contact Modal (single instance) -->
+
+<div id="contactModal" class="modal" aria-hidden="true">
+  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+    <button class="close" aria-label="Close">Close</button>
+    <h2 id="contactTitle">Contact JDC Capital</h2>
+    <form action="https://formsubmit.co/info@jdc-capital.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="name" placeholder="Full name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="phone" placeholder="Phone (optional)">
+      <textarea name="message" placeholder="Your message" required></textarea>
+      <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:8px;">
+        <button type="button" class="close button" style="background:#eef;">Cancel</button>
+        <button type="submit" class="button">Send</button>
+      </div>
+    </form>
+  </div>
+</div>
 </body>
 </html>

@@ -21,7 +21,7 @@
         <a class="btn btn-ghost" href="private-credit.html">Private Credit</a>
         <a class="btn btn-ghost" href="trade-finance.html">Commodity Trade Finance</a>
         <a class="btn btn-ghost" href="esg-projects.html">ESG Projects</a>
-        <a class="btn btn-primary" href="#" data-contact>Contact</a>
+        <a id="contactBtn" class="btn btn-primary" href="#" data-contact>Contact</a>
       </div>
     </div>
   </nav>
@@ -34,15 +34,17 @@
   </header>
 
   <main>
-<div class="cards-grid">
-  <div class="card"><h3>Energy Transition</h3><p>Renewable energy projects powered by new technologies (Solar, Wind, Hydro, Biogas &amp; Biomass, Minerals &amp; Metals for the transition, among others).</p></div>
-  <div class="card"><h3>Sustainability</h3><p>Efficiency upgrades in plants/equipment and processes to reduce ecological footprint: energy consumption, waste minimization, biodiversity protection, carbon footprint reduction, and resource optimization.</p></div>
-  <div class="card"><h3>Infrastructure</h3><p>Projects with positive social &amp; ecological impact enabling access to efficient/sustainable services: Energy (incl. rural/off‑grid), Water &amp; Sanitation, Transport (air/sea/land), Telecom &amp; Interconnectivity.</p></div>
-  <div class="card"><h3>Health &amp; Education</h3><p>Financing equipment &amp; technology, R&amp;D, staff training, and access to quality public‑private education.</p></div>
-  <div class="card"><h3>Agribusiness</h3><p>Green/organic crop production (e.g., sugarcane ethanol, sugar, citrus, fertilizers) and energy‑efficiency improvements in processing plants (soy, corn, wheat, etc.).</p></div>
-  <div class="card"><h3>Equity</h3><p>Funding initiatives that provide equal access to essential services and opportunities for the whole population.</p></div>
-</div>
-</main>
+    <section class="container">
+      <div class="grid" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:18px">
+        <div class="card reveal"><h3>Energy Transition</h3><p>Renewable energy projects powered by new technologies (Solar, Wind, Hydro, Biogas & Biomass, Minerals & Metals for the transition, among others).</p></div>
+        <div class="card reveal"><h3>Sustainability</h3><p>Efficiency upgrades in plants/equipment and processes to reduce ecological footprint: energy consumption, waste minimization, biodiversity protection, carbon footprint reduction, and resource optimization.</p></div>
+        <div class="card reveal"><h3>Infrastructure</h3><p>Projects with positive social & ecological impact enabling access to efficient/sustainable services: Energy (incl. rural/off‑grid), Water & Sanitation, Transport (air/sea/land), Telecom & Interconnectivity.</p></div>
+        <div class="card reveal"><h3>Health & Education</h3><p>Financing equipment & technology, R&D, staff training, and access to quality public‑private education.</p></div>
+        <div class="card reveal"><h3>Agribusiness</h3><p>Green/organic crop production and energy‑efficiency improvements in processing plants (soy, corn, wheat, etc.).</p></div>
+        <div class="card reveal"><h3>Equity</h3><p>Funding initiatives that provide equal access to essential services and opportunities for the whole population.</p></div>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <div class="container foot">
@@ -75,5 +77,25 @@
       </form>
     </div>
   </div>
+<!-- JDC Contact Modal (single instance) -->
+
+<div id="contactModal" class="modal" aria-hidden="true">
+  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+    <button class="close" aria-label="Close">Close</button>
+    <h2 id="contactTitle">Contact JDC Capital</h2>
+    <form action="https://formsubmit.co/info@jdc-capital.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="name" placeholder="Full name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="phone" placeholder="Phone (optional)">
+      <textarea name="message" placeholder="Your message" required></textarea>
+      <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:8px;">
+        <button type="button" class="close button" style="background:#eef;">Cancel</button>
+        <button type="submit" class="button">Send</button>
+      </div>
+    </form>
+  </div>
+</div>
 </body>
 </html>

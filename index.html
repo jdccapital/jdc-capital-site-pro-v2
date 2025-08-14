@@ -24,7 +24,7 @@
         <a class="btn btn-ghost" href="private-credit.html">Private Credit</a>
         <a class="btn btn-ghost" href="trade-finance.html">Commodity Trade Finance</a>
         <a class="btn btn-ghost" href="esg-projects.html">ESG Projects</a>
-        <a class="btn btn-primary" href="#" data-contact>Contact</a>
+        <a id="contactBtn" class="btn btn-primary" href="#" data-contact>Contact</a>
       </div>
     </div>
   </nav>
@@ -37,8 +37,8 @@
           <h1 class="headline reveal" style="margin-top:6px;">GLOBAL FINANCIAL SOLUTIONS</h1>
           <p class="subline reveal">Private Credit · Commodity Trade Finance · ESG Projects</p>
           <div class="cta-row reveal">
-            <a href="private-credit.html" class="btn">Explore Solutions</a>
-            <a href="#" class="btn btn-outline" data-contact>Talk to Us</a>
+            <a href="#solutions" class="btn">Explore Solutions</a>
+            <a id="contactBtnHero" href="#" class="btn btn-outline" data-contact>Talk to Us</a>
           </div>
         </div>
       </div>
@@ -48,7 +48,7 @@
   <section id="pc">
     <div class="container">
       <p class="kicker">Our Solutions</p>
-      <h2 class="reveal">Private Credit</h2>
+      <h2 class="reveal">Private Credit <a class="explore-inline" href="private-credit.html">Learn more →</a></h2>
       <div class="grid cols-3">
         <div class="card reveal">
           <h3>Direct Lending</h3>
@@ -76,7 +76,7 @@
 
   <section id="ctf" class="section-alt">
     <div class="container">
-      <h2 class="reveal">Commodity Trade Finance</h2>
+      <h2 class="reveal">Commodity Trade Finance <a class="explore-inline" href="trade-finance.html">Learn more →</a></h2>
       <div class="grid cols-3">
         <div class="card reveal">
           <h3>Pre‑Export Finance</h3>
@@ -100,7 +100,7 @@
 
   <section id="esg">
     <div class="container">
-      <h2 class="reveal">ESG Projects</h2>
+      <h2 class="reveal">ESG Projects <a class="explore-inline" href="esg-projects.html">Learn more →</a></h2>
       <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px">
         <div class="card reveal"><h3>Energy Transition</h3><p>Renewables powered by new technologies.</p></div>
         <div class="card reveal"><h3>Sustainability</h3><p>Efficiency upgrades that reduce ecological footprint.</p></div>
@@ -145,5 +145,25 @@
       </form>
     </div>
   </div>
+<!-- JDC Contact Modal (single instance) -->
+
+<div id="contactModal" class="modal" aria-hidden="true">
+  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+    <button class="close" aria-label="Close">Close</button>
+    <h2 id="contactTitle">Contact JDC Capital</h2>
+    <form action="https://formsubmit.co/info@jdc-capital.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="name" placeholder="Full name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="phone" placeholder="Phone (optional)">
+      <textarea name="message" placeholder="Your message" required></textarea>
+      <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:8px;">
+        <button type="button" class="close button" style="background:#eef;">Cancel</button>
+        <button type="submit" class="button">Send</button>
+      </div>
+    </form>
+  </div>
+</div>
 </body>
 </html>
