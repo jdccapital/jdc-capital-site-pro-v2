@@ -78,13 +78,10 @@
     </div>
   </div>
 <!-- JDC Contact Modal (single instance) -->
-
 <div id="contactModal" class="modal" aria-hidden="true">
   <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-      <h2 id="contactTitle">Contact JDC Capital</h2>
-      <a class="close" href="#" style="color:#0B108A;font-weight:700;text-decoration:none">Close</a>
-    </div>
+    <button class="close" aria-label="Close">Close</button>
+    <h2 id="contactTitle">Contact JDC Capital</h2>
     <form action="https://formsubmit.co/info@jdc-capital.com" method="POST">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
@@ -92,9 +89,9 @@
       <input type="email" name="email" placeholder="Email" required>
       <input type="tel" name="phone" placeholder="Phone (optional)">
       <textarea name="message" placeholder="Your message" required></textarea>
-      <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:8px">
-        <button type="button" class="close button" style="background:#eef">Cancel</button>
-        <button type="submit" class="button" style="background:#0B108A;color:#fff">Send</button>
+      <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:8px;">
+        <button type="button" class="close button" style="background:#eef;">Cancel</button>
+        <button type="submit" class="button">Send</button>
       </div>
     </form>
   </div>
