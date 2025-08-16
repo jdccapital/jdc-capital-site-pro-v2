@@ -21,7 +21,7 @@
         <a class="btn btn-ghost" href="private-credit.html">Private Credit</a>
         <a class="btn btn-ghost" href="trade-finance.html">Commodity Trade Finance</a>
         <a class="btn btn-ghost" href="esg-projects.html">ESG Projects</a>
-        <a id="contactBtn" class="btn btn-primary" href="#" data-contact>Contact</a>
+        <a id="contactBtn" class="btn btn-primary" href="mailto:info@jdc-capital.com">Contact</a>
       </div>
     </div>
   </nav>
@@ -36,7 +36,16 @@
   <main>
     <section class="container">
       <div class="grid" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:18px">
-        <div class="card reveal"><h3>Energy Transition</h3><p>Renewable energy projects powered by new technologies (Solar, Wind, Hydro, Biogas & Biomass, Minerals & Metals for the transition, among others).</p></div>
+        <div class="card reveal"><h3>Energy Transition</h3><p>Renewable energy projects powered by new technologies.</p> 
+          <ul class="list">
+            <li>Solar</li>
+            <li>Wind</li>
+            <li>Hydro</li>
+            <li>Biogas & Biomass</li>
+            <li>Minerals & Metals for the energy transition</li>
+            <li>Among others</li>
+          </ul>
+        </div>
         <div class="card reveal"><h3>Sustainability</h3><p>Efficiency upgrades in plants/equipment and processes to reduce ecological footprint: energy consumption, waste minimization, biodiversity protection, carbon footprint reduction, and resource optimization.</p></div>
         <div class="card reveal"><h3>Infrastructure</h3><p>Projects with positive social & ecological impact enabling access to efficient/sustainable services: Energy (incl. rural/off‑grid), Water & Sanitation, Transport (air/sea/land), Telecom & Interconnectivity.</p></div>
         <div class="card reveal"><h3>Health & Education</h3><p>Financing equipment & technology, R&D, staff training, and access to quality public‑private education.</p></div>
@@ -53,51 +62,7 @@
     </div>
   </footer>
 
-  <!-- Contact Modal -->
-  <div id="contact-modal" class="modal" aria-hidden="true">
-    <div class="modal-card">
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;">
-        <h3>Contact JDC Capital</h3>
-        <button id="modal-close" class="btn btn-secondary">Close</button>
-      </div>
-      <form id="contact-form">
-        <input class="input" type="text" name="name" placeholder="Full name" required>
-        <input class="input" type="email" name="email" placeholder="Email" required>
-        <input class="input" type="tel" name="phone" placeholder="Phone (optional)">
-        <textarea class="input" name="message" placeholder="Your message" required></textarea>
-        <input type="hidden" name="_subject" value="Website Inquiry - ESG Projects">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <div class="modal-actions">
-          <button type="button" class="btn btn-secondary" onclick="document.getElementById('contact-modal').classList.remove('show')">Cancel</button>
-          <button type="submit" class="btn btn-primary-solid">Send</button>
-        </div>
-        <div id="success" class="success-msg">Message sent. We will contact you shortly.</div>
-        <div id="error" class="error-msg">There was an error sending your message. Please try again.</div>
-      </form>
-    </div>
-  </div>
-<!-- JDC Contact Modal (single instance) -->
 
-<div id="contactModal" class="modal" aria-hidden="true">
-  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-      <h2 id="contactTitle">Contact JDC Capital</h2>
-      <a class="close" href="#" style="color:#0B108A;font-weight:700;text-decoration:none">Close</a>
-    </div>
-    <form action="https://formsubmit.co/info@jdc-capital.com" method="POST">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-      <input type="text" name="name" placeholder="Full name" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <input type="tel" name="phone" placeholder="Phone (optional)">
-      <textarea name="message" placeholder="Your message" required></textarea>
-      <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:8px">
-        <button type="button" class="close button" style="background:#eef">Cancel</button>
-        <button type="submit" class="button" style="background:#0B108A;color:#fff">Send</button>
-      </div>
-    </form>
-  </div>
-</div>
+
 </body>
 </html>
