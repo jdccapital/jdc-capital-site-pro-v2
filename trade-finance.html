@@ -21,7 +21,7 @@
         <a class="btn btn-ghost" href="private-credit.html">Private Credit</a>
         <a class="btn btn-ghost" href="trade-finance.html">Commodity Trade Finance</a>
         <a class="btn btn-ghost" href="esg-projects.html">ESG Projects</a>
-        <a id="contactBtn" class="btn btn-primary" href="#" data-contact>Contact</a>
+        <a id="contactBtn" class="btn btn-primary" href="mailto:info@jdc-capital.com">Contact</a>
       </div>
     </div>
   </nav>
@@ -38,6 +38,7 @@
       <div class="grid cols-3">
         <div class="card reveal">
           <h3>Pre‑Export Finance</h3>
+          <p>Solutions for Working Capital efficiency:</p>
           <ul class="list">
             <li>Receivable Finance / COFACE</li>
             <li>Warehouse / Warrant Finance</li>
@@ -45,10 +46,12 @@
           </ul>
         </div>
         <div class="card reveal">
-          <h3>Import Finance</h3>
-          <p>Solutions to address payments to overseas suppliers.</p>
-          <h3 style="margin-top:10px;">Investment Finance / CapEx</h3>
-          <p>Financing and debt refinancing better suited to Client conditions.</p>
+        <h3>Import Finance</h3>
+          <p>Solutions for addressing payments to overseas suppliers.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Investment Finance</h3>
+          <p>Financing and Investment Solutions / CapEx; and debt refinancing better suited to the conditions of our Clients.</p>
         </div>
         <div class="card reveal">
           <h3>Trade Flow Management</h3>
@@ -93,51 +96,7 @@
     </div>
   </footer>
 
-  <!-- Contact Modal -->
-  <div id="contact-modal" class="modal" aria-hidden="true">
-    <div class="modal-card">
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;">
-        <h3>Contact JDC Capital</h3>
-        <button id="modal-close" class="btn btn-secondary">Close</button>
-      </div>
-      <form id="contact-form">
-        <input class="input" type="text" name="name" placeholder="Full name" required>
-        <input class="input" type="email" name="email" placeholder="Email" required>
-        <input class="input" type="tel" name="phone" placeholder="Phone (optional)">
-        <textarea class="input" name="message" placeholder="Your message" required></textarea>
-        <input type="hidden" name="_subject" value="Website Inquiry - Trade Finance">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <div class="modal-actions">
-          <button type="button" class="btn btn-secondary" onclick="document.getElementById('contact-modal').classList.remove('show')">Cancel</button>
-          <button type="submit" class="btn btn-primary-solid">Send</button>
-        </div>
-        <div id="success" class="success-msg">Message sent. We will contact you shortly.</div>
-        <div id="error" class="error-msg">There was an error sending your message. Please try again.</div>
-      </form>
-    </div>
-  </div>
-<!-- JDC Contact Modal (single instance) -->
+  
 
-<div id="contactModal" class="modal" aria-hidden="true">
-  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-      <h2 id="contactTitle">Contact JDC Capital</h2>
-      <a class="close" href="#" style="color:#0B108A;font-weight:700;text-decoration:none">Close</a>
-    </div>
-    <form action="https://formsubmit.co/info@jdc-capital.com" method="POST">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-      <input type="text" name="name" placeholder="Full name" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <input type="tel" name="phone" placeholder="Phone (optional)">
-      <textarea name="message" placeholder="Your message" required></textarea>
-      <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:8px">
-        <button type="button" class="close button" style="background:#eef">Cancel</button>
-        <button type="submit" class="button" style="background:#0B108A;color:#fff">Send</button>
-      </div>
-    </form>
-  </div>
-</div>
 </body>
 </html>
